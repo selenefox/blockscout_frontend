@@ -1,0 +1,20 @@
+[
+    {
+        "title": "BPC-RC Apps",
+        "links": [
+            {
+                "text": "RETX",
+                "url": "https://retx.vn"
+            }
+        ]
+    },
+    {
+        "title": "BPC-RC Chain",
+        "links": [
+            {
+                "text": "Government",
+                "url": "http://explorer.testnet.bitplanet.global:3004"
+            }
+        ]
+    }
+]
