@@ -1,19 +1,23 @@
 [
     {
-        "title": "BPC-RC Apps",
+        "title": "BitPlanet",
         "links": [
             {
-                "text": "RETX",
-                "url": "https://retx.vn"
+                "text": "Official Website",
+                "url": "https://www.bitplanet.global/"
             }
         ]
     },
     {
-        "title": "BPC-RC Chain",
+        "title": "BitPlanet DAO",
         "links": [
             {
+                "text": "DAO Website",
+                "url": "https://dao.bitplanet.global/"
+            },
+            {
                 "text": "Government",
-                "url": "http://explorer.testnet.bitplanet.global:3004"
+                "url": "http://gov.explorer.testnet.bitplanet.global"
             }
         ]
     }
