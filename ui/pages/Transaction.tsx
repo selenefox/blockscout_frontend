@@ -40,15 +40,15 @@ const TransactionPageContent = () => {
   });
 
   const tabs: Array<RoutedTab> = [
-    { id: 'index', title: config.features.suave.isEnabled && data?.wrapped ? 'Confidential compute tx details' : 'Details', component: <TxDetails/> },
+    { id: 'index', title: config.features.suave.isEnabled && data?.wrapped ? '加密交易详情' : '详情', component: <TxDetails/> },
     config.features.suave.isEnabled && data?.wrapped ?
-      { id: 'wrapped', title: 'Regular tx details', component: <TxDetailsWrapped data={ data.wrapped }/> } :
+      { id: 'wrapped', title: '普通交易详情', component: <TxDetailsWrapped data={ data.wrapped }/> } :
       undefined,
-    { id: 'token_transfers', title: 'Token transfers', component: <TxTokenTransfer/> },
-    { id: 'internal', title: 'Internal txns', component: <TxInternals/> },
-    { id: 'logs', title: 'Logs', component: <TxLogs/> },
-    { id: 'state', title: 'State', component: <TxState/> },
-    { id: 'raw_trace', title: 'Raw trace', component: <TxRawTrace/> },
+    { id: 'token_transfers', title: 'Token交易', component: <TxTokenTransfer/> },
+    { id: 'internal', title: '内部交易', component: <TxInternals/> },
+    { id: 'logs', title: '交易日志', component: <TxLogs/> },
+    { id: 'state', title: '状态', component: <TxState/> },
+    { id: 'raw_trace', title: '原始数据', component: <TxRawTrace/> },
   ].filter(Boolean);
 
   const tabIndex = useTabIndexFromQuery(tabs);
@@ -68,7 +68,7 @@ const TransactionPageContent = () => {
     }
 
     return {
-      label: 'Back to transactions list',
+      label: '返回交易列表',
       url: appProps.referrer,
     };
   }, [ appProps.referrer ]);
@@ -85,7 +85,7 @@ const TransactionPageContent = () => {
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title="Transaction details"
+        title="交易详情"
         backLink={ backLink }
         contentAfter={ tags }
         secondRow={ titleSecondRow }
