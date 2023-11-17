@@ -30,7 +30,7 @@ const Home = () => {
             fontWeight={ 600 }
             color={ config.UI.homepage.plate.textColor }
           >
-            Welcome to { config.chain.name } explorer
+            Welcome to { config.chain.name } Explorer
           </Heading>
           <Box display={{ base: 'none', lg: 'block' }}>
             { config.features.account.isEnabled && <ProfileMenuDesktop/> }
