@@ -2,7 +2,7 @@
 {
     "title": "BPC-RC (EVM)",
     "url": "https://explorer.bitplanet.global/",
-    "group": "Mainnet",
+    "group": "Mainnets",
     "icon": "https://raw.githubusercontent.com/bitplanetglobal/public_resources/main/bitplanet_logo.svg",
     "invertIconInDarkMode": false,
     "isActive": true
