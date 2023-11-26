@@ -40,15 +40,15 @@ const BlocksTable = ({ data, isLoading, top, page, showSocketInfo, socketInfoNum
     <Table variant="simple" minWidth="1040px" size="md" fontWeight={ 500 }>
       <Thead top={ top }>
         <Tr>
-          <Th width="125px">Block</Th>
-          <Th width="120px">Size, bytes</Th>
+          <Th width="125px">区块高度</Th>
+          <Th width="120px">块容量</Th>
           <Th width={ `${ VALIDATOR_COL_WEIGHT / widthBase * 100 }%` } minW="160px">{ capitalize(getNetworkValidatorTitle()) }</Th>
-          <Th width="64px" isNumeric>Txn</Th>
-          <Th width={ `${ GAS_COL_WEIGHT / widthBase * 100 }%` }>Gas used</Th>
+          <Th width="64px" isNumeric>交易数量</Th>
+          <Th width={ `${ GAS_COL_WEIGHT / widthBase * 100 }%` }>Gas消耗</Th>
           { !isRollup && !config.UI.views.block.hiddenFields?.total_reward &&
-              <Th width={ `${ REWARD_COL_WEIGHT / widthBase * 100 }%` }>Reward { config.chain.currency.symbol }</Th> }
+              <Th width={ `${ REWARD_COL_WEIGHT / widthBase * 100 }%` }>节点收益 { config.chain.currency.symbol }</Th> }
           { !isRollup && !config.UI.views.block.hiddenFields?.burnt_fees &&
-              <Th width={ `${ FEES_COL_WEIGHT / widthBase * 100 }%` }>Burnt fees { config.chain.currency.symbol }</Th> }
+              <Th width={ `${ FEES_COL_WEIGHT / widthBase * 100 }%` }>燃烧手续费 { config.chain.currency.symbol }</Th> }
         </Tr>
       </Thead>
       <Tbody>
