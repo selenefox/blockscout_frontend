@@ -23,7 +23,7 @@ const TAB_LIST_PROPS = {
 };
 
 const Transactions = () => {
-  const verifiedTitle = config.chain.verificationType === 'validation' ? 'Validated' : 'Mined';
+  const verifiedTitle = config.chain.verificationType === 'validation' ? '已验证' : '已开采';
   const router = useRouter();
   const isMobile = useIsMobile();
   const txsQuery = useQueryWithPages({
@@ -63,7 +63,7 @@ const Transactions = () => {
       component: <TxsContent query={ txsQuery } showSocketInfo={ txsQuery.pagination.page === 1 } socketInfoNum={ num } socketInfoAlert={ socketAlert }/> },
     {
       id: 'pending',
-      title: 'Pending',
+      title: '等待中',
       component: (
         <TxsContent
           query={ txsQuery }
@@ -76,7 +76,7 @@ const Transactions = () => {
     },
     hasAccount ? {
       id: 'watchlist',
-      title: 'Watch list',
+      title: '观察名单',
       component: <TxsWatchlist query={ txsWatchlistQuery }/>,
     } : undefined,
   ].filter(Boolean);
@@ -85,7 +85,7 @@ const Transactions = () => {
 
   return (
     <>
-      <PageTitle title="Transactions" withTextAd/>
+      <PageTitle title="交易列表" withTextAd/>
       <RoutedTabs
         tabs={ tabs }
         tabListProps={ isMobile ? undefined : TAB_LIST_PROPS }

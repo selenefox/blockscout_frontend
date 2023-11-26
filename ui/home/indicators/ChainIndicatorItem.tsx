@@ -47,7 +47,7 @@ const ChainIndicatorItem = ({ id, title, value, icon, isSelected, onClick, stats
     }
 
     if (stats.isError) {
-      return <Text variant="secondary" fontWeight={ 400 }>no data</Text>;
+      return <Text variant="secondary" fontWeight={ 400 }>无数据</Text>;
     }
 
     return <Text variant="secondary" fontWeight={ 600 }>{ value(stats.data) }</Text>;

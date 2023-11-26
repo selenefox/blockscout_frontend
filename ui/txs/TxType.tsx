@@ -19,23 +19,23 @@ const TxType = ({ types, isLoading }: Props) => {
 
   switch (typeToShow) {
     case 'contract_call':
-      label = 'Contract call';
+      label = '调取合约';
       colorScheme = 'blue';
       break;
     case 'contract_creation':
-      label = 'Contract creation';
+      label = '合约创建';
       colorScheme = 'blue';
       break;
     case 'token_transfer':
-      label = 'Token transfer';
+      label = 'Token转账';
       colorScheme = 'orange';
       break;
     case 'token_creation':
-      label = 'Token creation';
+      label = '铸币';
       colorScheme = 'orange';
       break;
     case 'coin_transfer':
-      label = 'Coin transfer';
+      label = 'RC转账';
       colorScheme = 'orange';
       break;
     case 'rootstock_remasc':
@@ -47,7 +47,7 @@ const TxType = ({ types, isLoading }: Props) => {
       colorScheme = 'blue';
       break;
     default:
-      label = 'Transaction';
+      label = '交易';
       colorScheme = 'purple';
 
   }

@@ -25,7 +25,7 @@ const LatestTransactions = () => {
   const { num, socketAlert } = useNewTxsSocket();
 
   if (isError) {
-    return <Text mt={ 4 }>No data. Please reload page.</Text>;
+    return <Text mt={ 4 }>没有数据。 请重新加载页面。</Text>;
   }
 
   if (data) {
@@ -52,7 +52,7 @@ const LatestTransactions = () => {
           ))) }
         </Box>
         <Flex justifyContent="center">
-          <LinkInternal fontSize="sm" href={ txsUrl }>View all transactions</LinkInternal>
+          <LinkInternal fontSize="sm" href={ txsUrl }>查看所有交易</LinkInternal>
         </Flex>
       </>
     );

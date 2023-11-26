@@ -17,15 +17,15 @@ const TxStatus = ({ status, errorText, isLoading }: Props) => {
 
   switch (status) {
     case 'ok':
-      text = 'Success';
+      text = '成功';
       type = 'ok';
       break;
     case 'error':
-      text = 'Failed';
+      text = '失败';
       type = 'error';
       break;
     case null:
-      text = 'Pending';
+      text = '确认中';
       type = 'pending';
       break;
   }

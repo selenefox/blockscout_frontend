@@ -25,15 +25,15 @@ const TxDetailsWrapped = ({ data }: Props) => {
   return (
     <Grid columnGap={ 8 } rowGap={{ base: 3, lg: 3 }} templateColumns={{ base: 'minmax(0, 1fr)', lg: 'auto minmax(0, 1fr)' }}>
       <DetailsInfoItem
-        title="Transaction hash"
-        hint="Unique character string (TxID) assigned to every verified transaction"
+        title="交易HASH"
+        hint="分配给每笔已验证交易的唯一字符串 (TxID)"
         flexWrap="nowrap"
       >
         <TxEntity hash={ data.hash } noIcon noLink noCopy={ false }/>
       </DetailsInfoItem>
       <DetailsInfoItem
-        title="Method"
-        hint="Transaction method name"
+        title="方法"
+        hint="交易方法名称"
       >
         <Tag colorScheme="gray">
           { data.method }
@@ -56,8 +56,8 @@ const TxDetailsWrapped = ({ data }: Props) => {
       <DetailsInfoItemDivider/>
 
       <DetailsInfoItem
-        title="Value"
-        hint="Value sent in the native token (and USD) if applicable"
+        title="金额"
+        hint="以本机代币（和美元）发送的值（如果适用）"
       >
         <CurrencyValue
           value={ data.value }
@@ -66,8 +66,8 @@ const TxDetailsWrapped = ({ data }: Props) => {
         />
       </DetailsInfoItem>
       <DetailsInfoItem
-        title="Transaction fee"
-        hint="Total transaction fee"
+        title="手续费"
+        hint="手续费总额"
       >
         <CurrencyValue
           value={ data.fee.value }
@@ -78,8 +78,8 @@ const TxDetailsWrapped = ({ data }: Props) => {
       <TxDetailsGasPrice gasPrice={ data.gas_price }/>
       { data.gas_limit && (
         <DetailsInfoItem
-          title="Gas limit"
-          hint="Maximum amount of gas that can be used by the transaction"
+          title="Gas限制"
+          hint="交易可使用的最大Gas量"
         >
           { BigNumber(data.gas_limit).toFormat() }
         </DetailsInfoItem>
@@ -89,15 +89,15 @@ const TxDetailsWrapped = ({ data }: Props) => {
 
       <TxDetailsOther type={ data.type } nonce={ data.nonce } position={ null }/>
       <DetailsInfoItem
-        title="Raw input"
-        hint="Binary data included with the transaction. See logs tab for additional info"
+        title="原始输入数据"
+        hint="交易中包含的二进制数据。 请参阅日志选项卡以获取更多信息"
       >
         <RawInputData hex={ data.raw_input }/>
       </DetailsInfoItem>
       { data.decoded_input && (
         <DetailsInfoItem
-          title="Decoded input data"
-          hint="Decoded input data"
+          title="解码输入数据"
+          hint="解码输入数据"
         >
           <LogDecodedInputData data={ data.decoded_input }/>
         </DetailsInfoItem>

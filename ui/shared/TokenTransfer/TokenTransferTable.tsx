@@ -38,11 +38,11 @@ const TokenTransferTable = ({
           { showTxInfo && <Th width="44px"></Th> }
           <Th width="185px">Token</Th>
           <Th width="160px">Token ID</Th>
-          { showTxInfo && <Th width="25%">Txn hash</Th> }
-          <Th width="25%">From</Th>
+          { showTxInfo && <Th width="25%">交易HASH</Th> }
+          <Th width="25%">发送方</Th>
           { baseAddress && <Th width="50px" px={ 0 }/> }
-          <Th width="25%">To</Th>
-          <Th width="25%" isNumeric>Value</Th>
+          <Th width="25%">接收方</Th>
+          <Th width="25%" isNumeric>金额</Th>
         </Tr>
       </Thead>
       <Tbody>

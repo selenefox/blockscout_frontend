@@ -68,7 +68,7 @@ const LatestBlocks = () => {
   let content;
 
   if (isError) {
-    content = <Text>No data. Please reload page.</Text>;
+    content = <Text>没有数据。 请重新加载页面。</Text>;
   }
 
   if (data) {
@@ -79,7 +79,7 @@ const LatestBlocks = () => {
         { statsQueryResult.data?.network_utilization_percentage !== undefined && (
           <Skeleton isLoaded={ !statsQueryResult.isPlaceholderData } mb={{ base: 6, lg: 3 }} display="inline-block">
             <Text as="span" fontSize="sm">
-              Network utilization:{ nbsp }
+              网络利用率:{ nbsp }
             </Text>
             <Text as="span" fontSize="sm" color="blue.400" fontWeight={ 700 }>
               { statsQueryResult.data?.network_utilization_percentage.toFixed(2) }%
@@ -98,7 +98,7 @@ const LatestBlocks = () => {
           </AnimatePresence>
         </VStack>
         <Flex justifyContent="center">
-          <LinkInternal fontSize="sm" href={ route({ pathname: '/blocks' }) }>View all blocks</LinkInternal>
+          <LinkInternal fontSize="sm" href={ route({ pathname: '/blocks' }) }>查看所有区块</LinkInternal>
         </Flex>
       </>
     );
@@ -106,7 +106,7 @@ const LatestBlocks = () => {
 
   return (
     <Box width={{ base: '100%', lg: '280px' }} flexShrink={ 0 }>
-      <Heading as="h4" size="sm" mb={ 4 }>Latest blocks</Heading>
+      <Heading as="h4" size="sm" mb={ 4 }>最新区块</Heading>
       { content }
     </Box>
   );

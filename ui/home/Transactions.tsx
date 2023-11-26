@@ -14,11 +14,11 @@ const TransactionsHome = () => {
     const tabs = [
       { id: 'txn', title: 'Latest txn', component: <LatestTxs/> },
       config.features.optimisticRollup.isEnabled && { id: 'deposits', title: 'Deposits (L1→L2 txn)', component: <LatestDeposits/> },
-      hasAccount && { id: 'watchlist', title: 'Watch list', component: <LatestWatchlistTxs/> },
+      hasAccount && { id: 'watchlist', title: '观察名单', component: <LatestWatchlistTxs/> },
     ].filter(Boolean);
     return (
       <>
-        <Heading as="h4" size="sm" mb={ 4 }>Transactions</Heading>
+        <Heading as="h4" size="sm" mb={ 4 }>交易</Heading>
         <TabsWithScroll tabs={ tabs } lazyBehavior="keepMounted"/>
       </>
     );
@@ -26,7 +26,7 @@ const TransactionsHome = () => {
 
   return (
     <>
-      <Heading as="h4" size="sm" mb={ 4 }>Latest transactions</Heading>
+      <Heading as="h4" size="sm" mb={ 4 }>最新交易</Heading>
       <LatestTxs/>
     </>
   );

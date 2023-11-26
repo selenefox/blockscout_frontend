@@ -10,11 +10,11 @@ const StatsGasPrices = ({ gasPrices }: {gasPrices: GasPrices}) => {
 
   return (
     <Grid templateColumns="repeat(2, max-content)" rowGap={ 2 } columnGap={ 4 } padding={ 4 } fontSize="xs">
-      <GridItem { ...nameStyleProps }>Slow</GridItem>
+      <GridItem { ...nameStyleProps }>慢</GridItem>
       <GridItem>{ `${ gasPrices.slow } Gwei` }</GridItem>
-      <GridItem { ...nameStyleProps }>Average</GridItem>
+      <GridItem { ...nameStyleProps }>普通</GridItem>
       <GridItem>{ `${ gasPrices.average } Gwei` }</GridItem>
-      <GridItem { ...nameStyleProps }>Fast</GridItem>
+      <GridItem { ...nameStyleProps }>快</GridItem>
       <GridItem>{ `${ gasPrices.fast } Gwei` }</GridItem>
     </Grid>
   );

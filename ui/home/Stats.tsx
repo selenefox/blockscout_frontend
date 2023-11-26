@@ -67,7 +67,7 @@ const Stats = () => {
         ) : (
           <StatsItem
             icon={ blockIcon }
-            title="Total blocks"
+            title="区块高度"
             value={ Number(data.total_blocks).toLocaleString() }
             url={ route({ pathname: '/blocks' }) }
             isLoading={ isPlaceholderData }
@@ -76,21 +76,21 @@ const Stats = () => {
         { hasAvgBlockTime && (
           <StatsItem
             icon={ clockIcon }
-            title="Average block time"
+            title="平均出块时间"
             value={ `${ (data.average_block_time / 1000).toFixed(1) } s` }
             isLoading={ isPlaceholderData }
           />
         ) }
         <StatsItem
           icon={ txIcon }
-          title="Total transactions"
+          title="总交易量"
           value={ Number(data.total_transactions).toLocaleString() }
           url={ route({ pathname: '/txs' }) }
           isLoading={ isPlaceholderData }
         />
         <StatsItem
           icon={ walletIcon }
-          title="Wallet addresses"
+          title="钱包地址总量"
           value={ Number(data.total_addresses).toLocaleString() }
           _last={ isOdd ? lastItemTouchStyle : undefined }
           isLoading={ isPlaceholderData }
@@ -98,7 +98,7 @@ const Stats = () => {
         { hasGasTracker && data.gas_prices && (
           <StatsItem
             icon={ gasIcon }
-            title="Gas tracker"
+            title="Gas价格"
             value={ `${ Number(data.gas_prices.average).toLocaleString() } Gwei` }
             _last={ isOdd ? lastItemTouchStyle : undefined }
             tooltipLabel={ gasLabel }

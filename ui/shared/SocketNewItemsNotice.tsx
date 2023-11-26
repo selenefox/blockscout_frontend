@@ -28,21 +28,21 @@ const SocketNewItemsNotice = chakra(({ children, className, url, num, alert, typ
 
     switch (type) {
       case 'token_transfer':
-        name = 'token transfer';
+        name = 'Token交易';
         break;
       case 'deposit':
-        name = 'deposit';
+        name = '存款信息';
         break;
       case 'block':
-        name = 'block';
+        name = '区块信息';
         break;
       default:
-        name = 'transaction';
+        name = '交易信息';
         break;
     }
 
     if (!num) {
-      return `scanning new ${ name }s...`;
+      return `扫描新的${ name }...`;
     }
 
     return (

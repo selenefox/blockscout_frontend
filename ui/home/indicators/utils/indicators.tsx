@@ -12,10 +12,10 @@ import * as TokenEntity from 'ui/shared/entities/token/TokenEntity';
 
 const dailyTxsIndicator: TChainIndicator<'homepage_chart_txs'> = {
   id: 'daily_txs',
-  title: 'Daily transactions',
+  title: '日常交易',
   value: (stats) => Number(stats.transactions_today).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
   icon: <Icon as={ txIcon } boxSize={ 6 } bgColor="#56ACD1" borderRadius="base" color="white"/>,
-  hint: `The total daily number of transactions on the blockchain for the last month.`,
+  hint: `上个月区块链上的每日交易总数。`,
   api: {
     resourceName: 'homepage_chart_txs',
     dataFn: (response) => ([ {
@@ -56,7 +56,7 @@ const coinPriceIndicator: TChainIndicator<'homepage_chart_market'> = {
 
 const marketPriceIndicator: TChainIndicator<'homepage_chart_market'> = {
   id: 'market_cap',
-  title: 'Market cap',
+  title: '市值',
   value: (stats) => '$' + Number(stats.market_cap).toLocaleString(undefined, { maximumFractionDigits: 0, notation: 'compact' }),
   icon: <Icon as={ globeIcon } boxSize={ 6 } bgColor="#6A5DCC" borderRadius="base" color="white"/>,
   // eslint-disable-next-line max-len

@@ -5,7 +5,7 @@ const DataFetchAlert = ({ className }: { className?: string }) => {
   return (
     <Alert status="warning" width="fit-content" className={ className }>
       <AlertDescription>
-        Something went wrong. Try refreshing the page or come back later.
+        出了些问题。 尝试刷新页面或稍后再回来。
       </AlertDescription>
     </Alert>
   );

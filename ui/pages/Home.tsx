@@ -30,10 +30,22 @@ const Home = () => {
             fontWeight={ 600 }
             color={ config.UI.homepage.plate.textColor }
           >
-            Welcome to { config.chain.name } Explorer
+            欢迎使用{ config.chain.name }区块链浏览器
           </Heading>
           <Box display={{ base: 'none', lg: 'block' }}>
             { config.features.account.isEnabled && <ProfileMenuDesktop/> }
+          </Box>
+          <Box
+            w="100%"
+            background={ config.UI.homepage.plate.background }
+            borderRadius="24px"
+            padding={{ base: '24px', lg: '48px' }}
+            minW={{ base: 'unset', lg: '900px' }}>
+            
+            <video autoPlay>
+              <source src="https://raw.githubusercontent.com/bitplanetglobal/public_resources/main/explorer.bitplanet.video.mp4" type="video/mp4" />
+            </video>
+            
           </Box>
         </Flex>
         <LightMode>

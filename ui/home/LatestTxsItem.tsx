@@ -114,7 +114,7 @@ const LatestTxsItem = ({ tx, isLoading }: Props) => {
         ) }
         { !config.UI.views.tx.hiddenFields?.tx_fee && (
           <Skeleton isLoaded={ !isLoading } display="flex" whiteSpace="pre">
-            <Text as="span">Fee </Text>
+            <Text as="span">手续费 </Text>
             { tx.stability_fee ? (
               <TxFeeStability data={ tx.stability_fee } accuracy={ 5 } color="text_secondary" hideUsd/>
             ) : (

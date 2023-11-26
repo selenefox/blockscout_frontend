@@ -44,19 +44,19 @@ const TxsTable = ({
       <TheadSticky top={ top }>
         <Tr>
           <Th width="54px"></Th>
-          <Th width="22%">Txn hash</Th>
-          <Th width="160px">Type</Th>
-          <Th width="20%">Method</Th>
-          { showBlockInfo && <Th width="18%">Block</Th> }
-          <Th width={{ xl: '152px', base: '86px' }}>From</Th>
+          <Th width="22%">交易HASH</Th>
+          <Th width="160px">类型</Th>
+          <Th width="20%">方法</Th>
+          { showBlockInfo && <Th width="18%">区块</Th> }
+          <Th width={{ xl: '152px', base: '86px' }}>发送方</Th>
           <Th width={{ xl: currentAddress ? '48px' : '36px', base: currentAddress ? '52px' : '28px' }}></Th>
-          <Th width={{ xl: '152px', base: '86px' }}>To</Th>
+          <Th width={{ xl: '152px', base: '86px' }}>接收方</Th>
           { !config.UI.views.tx.hiddenFields?.value && (
             <Th width="20%" isNumeric>
               <Link onClick={ sort('val') } display="flex" justifyContent="end">
                 { sorting === 'val-asc' && <Icon boxSize={ 5 } as={ rightArrowIcon } transform="rotate(-90deg)"/> }
                 { sorting === 'val-desc' && <Icon boxSize={ 5 } as={ rightArrowIcon } transform="rotate(90deg)"/> }
-                { `Value ${ config.chain.currency.symbol }` }
+                { `金额(${ config.chain.currency.symbol })` }
               </Link>
             </Th>
           ) }
@@ -65,7 +65,7 @@ const TxsTable = ({
               <Link onClick={ sort('fee') } display="flex" justifyContent="end">
                 { sorting === 'fee-asc' && <Icon boxSize={ 5 } as={ rightArrowIcon } transform="rotate(-90deg)"/> }
                 { sorting === 'fee-desc' && <Icon boxSize={ 5 } as={ rightArrowIcon } transform="rotate(90deg)"/> }
-                { `Fee${ config.UI.views.tx.hiddenFields?.fee_currency ? '' : ` ${ config.chain.currency.symbol }` }` }
+                { `手续费(${ config.UI.views.tx.hiddenFields?.fee_currency ? '' : ` ${ config.chain.currency.symbol }` })` }
               </Link>
             </Th>
           ) }
