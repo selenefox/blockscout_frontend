@@ -52,8 +52,8 @@ const Home = () => {
         mt={ 8 }
       >
         
-        <video autoPlay muted loop>
-          <source src="https://raw.githubusercontent.com/bitplanetglobal/public_resources/main/explorer.bitplanet.video.mp4" type="video/mp4" />
+        <video autoPlay muted>
+          <source src="https://raw.githubusercontent.com/bitplanetglobal/public_resources/main/explorer.bitplanet.video.super.node.mp4" type="video/mp4" />
         </video>
         
       </Flex>
